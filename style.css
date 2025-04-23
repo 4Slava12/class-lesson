@@ -1,0 +1,98 @@
+/* Общий стиль страницы */
+body {
+    font-family: Tahoma, sans-serif;
+}
+
+/* Цвет заголовков */
+h3, h4 {
+    color: rgb(30, 128, 0);
+}
+
+/* Размер шрифта для желаний и задач */
+.wish-list a {
+    font-size: 16pt;
+}
+
+.task-block h4 ~ ol.task-list {
+    font-size: 14pt;
+}
+
+/* Фоновые цвета для разных блоков задач */
+.task-block.first   { background-color: lightyellow; }
+.task-block.second  { background-color: lightpink; }
+.task-block.third   { background-color: skyblue; }
+.task-block.fourth  { background-color: lightgreen; }
+.task-block.fifth   { background-color: lightgrey; }
+
+/* Акцент на важный текст в задачах */
+ol.task-list strong {
+    color: violet;
+}
+
+/* Рамка для быстрого исполнения желания */
+.task-block.fast-wish {
+    border: 2px dotted red;
+}
+
+/* Оформление ссылок */
+.wish-list a {
+    color: darkslategray;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.wish-list a:hover, .wish-list a:focus {
+    color: darkred;
+    text-decoration: underline;
+}
+
+.wish-list a:visited {
+    color: indigo;
+}
+
+.wish-list a:active {
+    color: maroon;
+}
+
+/* Небольшие отступы и другие декоративные элементы */
+.task-block p {
+    padding: 10px;
+}
+
+ol.task-list {
+    line-height: 1.5em;
+}
+
+/* Рамка для быстрого исполнения желания */
+.task-block.fast-wish {
+    border: 2px dotted red;
+}
+
+/* Оформление ссылок */
+.wish-list a:focus {
+    color: darkslategray;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.wish-list a:hover, .wish-list a:focus {
+    color: darkred;
+    text-decoration: underline;
+}
+
+.wish-list a:visited {
+    color: indigo;
+}
+
+.wish-list a:active {
+    color: maroon;
+}
+
+/* Другие дополнительные эффекты */
+.task-block p {
+    padding: 10px;
+}
+
+ol.task-list {
+    line-height: 1.5em;
+}
