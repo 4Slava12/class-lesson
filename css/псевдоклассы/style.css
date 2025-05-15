@@ -1,0 +1,115 @@
+body {
+    font-family: arial sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+.btn {
+    position: relative;
+    background-color: #6200ea;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+.btn::before,
+.btn ::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+.btn::before {
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-50%) scaleY(0);
+    border-radius: 5px;
+}
+.btn ::after {
+    bottom: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-50%) scaleY(0);
+    border-radius: 5px;
+}
+.btn :hover {
+    color: #6200ea;
+}
+.btn :hover::before {
+transform: translateX(-50%) scaleY(1);
+}
+.btm :hover ::after {
+    transform: translateX(-50%) scaleY(1);
+}
+.btn :active {
+background-color: #3700b3
+}
+.quote {
+    background: white;
+    border-radius: 10px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1) ;
+    width: 400px;
+    padding: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin-top: 100px;
+}
+.quote :hover {
+    transform: translateY(-5px);
+}
+.quote p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    position: relative;
+    padding: 0 20px;
+}
+.quote p ::before { 
+    content: "“";
+    font-size: 40px;
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+.quote p ::after {
+    content: "“";
+    font-size: 40px;
+    color: #3498db;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+.quote :hover ::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 340px;
+    background-color: 340px;
+    height: 2px;
+    background-color: #3498db;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.author {
+    display: block;
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+position: relative;
+padding-left: 30px;
+}
+.author ::before {
+    content: "-";
+    
+}
