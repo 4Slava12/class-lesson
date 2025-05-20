@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #2C3E50;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at top right, #3498DB, #2980B9);
+  animation: appear-disappear 3s ease-in-out infinite;
+}
+@keyframes appear-disappear {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
