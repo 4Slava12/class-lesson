@@ -1,45 +1,24 @@
+
 body {
     margin: 0;
-    height: 100;
+    height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
-.animated-box {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    position: absolute;
-    animation: moveAndChangeColor 8s infinite alternate-reverse;
+.square {
+    width: 200px;          
+    height: 200px;         
+    background-color: rgb(255, 0, 0);
+    animation-name: spinAndZoom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-@keyframes moveAndChangeColor {
-    0% {
-        top: 0;
-        left: 0;
-        background-color: red;
-    } 
-       
-    25% {
-        top: 0;
-        left: 75%;
-        background-color: blue;
-    }
-    50% {
-        top: 75%;
-        left: 75%;
-        background-color: yellow;
-    }
-    75% {
-        top: 75%;
-        left: 0;
-        background-color: green;
-    }
-    100% {
-        top: 0;
-        left: 0;
-        background-color: orange;
-    }
-} 
+@keyframes spinAndZoom {
+    from { transform: rotate(0deg) scale(1); }
+    to   { transform: rotate(360deg) scale(1.5); }
+}
