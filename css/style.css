@@ -1,68 +1,45 @@
-body
-{
-    background-image: url("e88267a222de3b152d6aced055fc84a7.jpg");
-    background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-}
-.p1 {
-    color: red; /* цвет текста */
-background-color: rgba(103, 147, 37, 0.845); /* цвет */
-width: 500px; /*ширина*/
-height: 300px; /* высота*/
-text-align: center; /* выравнивание текста */
-font-size: 14px;
-font-family: "Winky Rough", sans-serif; /*начертание шрифта*/
-border: 2px solid red; /*сплошная линия, пунктирная линия, цвет*/
-border-radius: 50%;
-text-shadow: 2px 2px 10px black;
-padding: 50px;
-margin-top: 50px;
-margin-bottom: 50px;
-margin-left: 50px;
-margin-right: 50px;
-padding: 50px 100px 150px 200px;
+body {
+    margin: 0;
+    height: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
-.p2 {
-    color: aqua;
-    text-align: right; /* выравнивание текста справа*/
-    font-size: 14pt;
-    font-weight: 900; /*жирность шрифта*/
-    font-style: italic;
-    border-bottom: 2px solid blue;
-    border-width: 5px dotted red;
-    border-left: 8px dashed green;
-    border-right: 5px double purple;
-    box-shadow: 5px 3px 40px 5px black;/*тень шрифта*/
-    padding: 50px 100px;
-    margin-top: 50px 100px;
-    margin-bottom: 50px 100px;
-    margin-left: 50px 100px;
-    margin-right: 50px 100px;
- 
+.animated-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    animation: moveAndChangeColor 8s infinite alternate-reverse;
 }
-.p3 {
-    text-align: justify; /* выравнивание текста по центру*/
-font-size: 140%;
-transform: aperceas; /*заглавные буквы*/
-line-height: 40px; /*высота строки*/
-background-color: blue;
-margin-top: 50px;
-margin-bottom: 150px;
-margin-left: 100px;
-margin-right: 200px;
-padding: 50px 100px 150px 200px;
-}
-.p4{
-    font-size: 4em;
-    background-color: beige;
-    padding-left: 25px;
-    padding-right: 50px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    margin-left: 25px;
-    margin-right: 50px;
-}
+
+@keyframes moveAndChangeColor {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: red;
+    } 
+       
+    25% {
+        top: 0;
+        left: 75%;
+        background-color: blue;
+    }
+    50% {
+        top: 75%;
+        left: 75%;
+        background-color: yellow;
+    }
+    75% {
+        top: 75%;
+        left: 0;
+        background-color: green;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        background-color: orange;
+    }
+} 
