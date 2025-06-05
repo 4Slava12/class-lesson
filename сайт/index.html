@@ -7,46 +7,84 @@
     <link rel="stylesheet" href="style.css">
 </head>
   <div class="container">  
-    <h1 class="typed">Привет, я веб-разработчик.</h1>  
-</div>  
+   <h1>
+    Привет, я <span class="k">веб-разработчик</span>
+</h1>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.querySelector('h1');
+    let i = 0;
+    const str = heading.textContent.trim();
+
+    setInterval(() => {
+        if(i <= str.length){
+            heading.innerHTML = str.slice(0,i++);
+        }
+    }, 100); // Скорость вывода символов (чем меньше число, тем быстрее)
+});
+</script>
 <body class="animated-bg">
-     <nav>
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <nav>
         <ul>
+            
             <li><a href="#about">Обо мне</a></li>
             <li><a href="#portfolio">Портфолио</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
     </nav>
-    
-    <div class="container">  
-    <h1 class="typed">Привет, я веб-разработчик.</h1>  
+     
 </div>  
     
-    <!-- Раздел Обо мне -->
+    <!-- Раздел Обо мне --><div class="c">
     <section id="about">
         <h2>Обо мне</h2>
-        <p>Привет! Меня зовут Алексей Иванов, я Веб-разработчик.</p>
+        <p>Привет! Меня зовут Чулкова Ярослава, я Веб-разработчик.
+            На данный момент обучаюсь в школе "Кировский дом творчества"
+        </p>
+        <img src="photo_2025-06-05_11-51-18.jpg" alt=" мое фото" class="round">
     </section>
-
-    <!-- Портфолио -->
+</div>
+    <!-- Портфолио --> <div class="v">
     <section id="portfolio">
         <h2>Портфолио</h2>
-        <div class="project">
-            <img src="image1.jpg" alt="Проект 1">
-            <h3>Название проекта 1</h3>
-            <p>Описание первого проекта...</p>
+        <div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h2>страница о себе</h2>
+            <img src="2025-06-05_12-26-39.jpg" alt="картинка страницы о себе">
         </div>
-        
-        <div class="project">
-            <img src="image2.jpg" alt="Проект 2">
-            <h3>Название проекта 2</h3>
-            <p>Описание второго проекта...</p>
-        </div>
-    </section>
+        <div class="flip-card-back">
+           <h2>страница о себе</h2>
+            <h6>1. Главная страница, содержащая ФИО, возраст, дату рождения, школу, фото
 
-    <!-- Контактная информация -->
+2. Портфолио: информация об участии в конкурсах, олимпиадах и т.п. с названием, описанием каждого конкурса и фото сертификата
+
+3. Увлечения: расскажите о своих увлечениях с подробным описанием и фотографиями
+
+4. Желания: напишите 20 своих желаний в виде списка (теги ul и li)
+
+5. Моя профессия: расскажите, кем вы хотите стать в будущем, почему и что необходимо сделать, для того, чтобы стать этим специалистом
+
+6. Цель на год: Придумайте и напишите свою цель на год (чему-то научиться, чего-то достичь, что-то получить), продумайте шаги, которые необходимо сделать, чтобы этой цели добиться в виде списка. Прикрепите фото, которое будет визуализировать цель.</h6>
+<div class="t">html</div>
+        </div>
+    </div>
+</div>
+        
+       
+      
+    </section>
+</div>
+    <!-- Контактная информация --> <div class="b">
     <section id="contact">
-        <h2>Контакты</h2>
+        <h2>Свяжись со мной</h2>
         <form action="#" method="post">
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name"><br>
@@ -59,9 +97,11 @@
             <button type="submit">Отправить</button>
         </form>
     </section>
-
+</div>
     <footer>
-        © 2025 Алексей Иванов
+        © 2025 все права защищены
+        <p><img src="5af0d380-e599-11e9-9a4f-c50e3bbde951.png" alt="githab" class="round">
+      <img src="cropped-l-cbrf_61.jpg" alt="twitter" class="round"></p>
     </footer>
 </body>
 </html>
